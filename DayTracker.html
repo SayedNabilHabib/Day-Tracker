@@ -1,0 +1,145 @@
+<html>
+
+<head>
+  <title>Day Tracker</title>
+
+</head>
+<style type="text/css">
+  #wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+  }
+
+  body {
+    background-color: aliceblue;
+  }
+
+  ul {
+
+    background-color: dimgray;
+    list-style-type: none;
+
+    padding: 0;
+    text-align: center;
+
+  }
+
+  li {
+    float: none;
+    padding: 20;
+    display: inline-block;
+    font-size: 30;
+
+
+
+  }
+
+  #today {
+
+    background-color: antiquewhite;
+    height: 230px;
+    width: 65px;
+    margin-left: 180px;
+    position: absolute;
+
+
+  }
+
+  #demo {
+
+    background-color: antiquewhite;
+    height: 65px;
+    width: 960px;
+    margin-left: 0px;
+    margin-top: 180px;
+    position: absolute;
+    font-size: 40px;
+    padding-top: 15px;
+
+  }
+
+  #button1 {
+
+    position: absolute;
+  }
+
+
+
+  }
+</style>
+
+<body>
+
+  <div id="wrapper">
+
+    <ul>
+      <li> Mon </li>
+      <li> Tue </li>
+      <li> Wed </li>
+      <li> Thu </li>
+      <li> Fri </li>
+      <li> Sat </li>
+      <li> Sun </li>
+      <ul>
+
+
+
+        <div id="today">
+
+        </div>
+
+
+
+        <div id="demo">
+
+
+        </div>
+
+        <pre></pre>
+
+        <script>
+          window.onload = function myFunction() {
+            var d = new Date();
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+            var n = weekday[d.getDay()];
+            document.getElementById("demo").innerHTML = n;
+
+            switch (n) {
+                case "Sunday":
+                document.getElementById("today").style.marginLeft = '600px';
+                  break;
+                case "Monday":
+                document.getElementById("today").style.marginLeft = '180px';
+                  break;
+                case "Tuesday":
+                document.getElementById("today").style.marginLeft = '278px';
+                  break;
+                case "Wednesday":
+                document.getElementById("today").style.marginLeft = '372px';
+                  break;
+                case "Thursday":
+                document.getElementById("today").style.marginLeft = '468px';
+                  break;
+                case "Friday":
+                document.getElementById("today").style.marginLeft = '555px';
+                  break;
+                case "Saturday":
+                document.getElementById("today").style.marginLeft = '633px';
+                break;
+
+              }
+          }
+        </script>
+
+</body>
+
+
+</div>
